@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  samba:
+    tty: true
+    network_mode: bridge
+    volumes:
+      - /mnt/hdd_repo/Shared/:/Shared
+    ports:
+      - "445:445"
+    build:
+      context: .
+      dockerfile: Dockerfile
