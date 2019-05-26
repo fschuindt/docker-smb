@@ -9,5 +9,5 @@ COPY smb.conf /etc/samba/smb.conf
 
 EXPOSE 445/tcp
 
-CMD ["smbd", "--foreground", "--log-stdout"]
+CMD ["smbd", "--foreground", "--log-stdout", "--no-process-group"]
 
