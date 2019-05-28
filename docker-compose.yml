@@ -2,10 +2,15 @@ version: '3'
 
 services:
   samba:
+    restart: always
     tty: true
     network_mode: bridge
     volumes:
-      - /smb-shares/media/shared/:/Shared
+      - /smb-shares/books/:/Books
+      - /smb-shares/media/photos/:/Photos
+      - /smb-shares/media/video/:/Video
+      - /smb-shares/media/music/:/Music
+
     ports:
       - "445:445"
     build:
