@@ -12,6 +12,4 @@
 ## 5/27/2019
 - Got all guest writable shares working.
 - root:users works for ownership.
-
-TODO:
-- Try sharing a directory for speedysan (basically password protected directory for akshat).
+- Managed to get authed users working after copying adduser + smbpasswd (and the bash script to get users and passwords from docker-compose.yml) from another image.

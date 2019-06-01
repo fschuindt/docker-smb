@@ -14,6 +14,7 @@ services:
       - /smb-shares/akshat:/Akshat
       - /smb-shares/nandita:/Nandita
       - /smb-shares/sys:/Sys
+      - /smb-shares/xero:/Xero
     environment:
       ACCOUNT_akshat: blah112358!
       ACCOUNT_nandita: ChipMunk88
