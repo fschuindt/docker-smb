@@ -2,10 +2,23 @@ version: '3'
 
 services:
   samba:
+    restart: always
     tty: true
     network_mode: bridge
     volumes:
-      - /mnt/hdd_repo/Shared/:/Shared
+      - /smb-shares/books/:/Books
+      - /smb-shares/media/photos/:/Photos
+      - /smb-shares/media/video/:/Video
+      - /smb-shares/media/music/:/Music
+      - /smb-shares/shared:/Shared
+      - /smb-shares/akshat:/Akshat
+      - /smb-shares/nandita:/Nandita
+      - /smb-shares/sys:/Sys
+      - /smb-shares/xero:/Xero
+    environment:
+      ACCOUNT_akshat: blah112358!
+      ACCOUNT_nandita: ChipMunk88
+
     ports:
       - "445:445"
     build:
