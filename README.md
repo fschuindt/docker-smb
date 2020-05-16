@@ -10,6 +10,10 @@ Note the simple `smb.conf` file.
 
 It will start a **writable Guests allowed server**.
 
+## Pro tip
+
+If you ever want a Samba network setup to be reliable, make sure that the server software is running on a Windows machine, never a Unix-based one. All Unix-based Samba server implementations are unstable and that's probably the reason you think Samba sucks.
+
 ## Configuration
 
 Edit the `docker-compose.yml` file, change the `volumes:` section to map the directory you want.
