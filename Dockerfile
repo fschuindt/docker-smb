@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.12.0
 
 RUN apk add --no-cache --update \
     samba-common-tools \
@@ -7,7 +7,7 @@ RUN apk add --no-cache --update \
 
 COPY smb.conf /etc/samba/smb.conf
 
-EXPOSE 445/tcp
+EXPOSE 139/tcp 445/tcp
 
-CMD ["smbd", "--foreground", "--log-stdout"]
+CMD ["smbd", "--foreground", "--log-stdout", "--no-process-group"]
 
